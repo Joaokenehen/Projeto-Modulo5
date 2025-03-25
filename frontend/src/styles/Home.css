@@ -1,0 +1,320 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body.home-page {
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* Cabeçalho */
+header {
+  position: fixed; /* Fixa no topo */
+  top: 0; /* Alinha no topo */
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  background-color: #fff; /* Cor de fundo */
+  padding: 10px 20px; /* Espaçamento interno */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  z-index: 1000; /* Mantém sobre outros elementos */
+}
+
+.header-home {
+  background-color: #026a6e;
+  color: white;
+  padding: 15px 0;
+}
+
+.header-home .conteiner-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.header-home .logo {
+  height: 40px;
+  width: auto;
+  margin-left: 20px;
+}
+
+.header-home .menu-navegacao {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  margin-left: 1200px;
+  margin-top: -1px;
+}
+
+.header-home .menu-navegacao .botoes-navegacao-cadastro,
+.header-home .menu-navegacao .botoes-navegacao-login {
+  padding: 10px 20px;
+  position: relative;
+  margin-top: -10px;
+  width: auto;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cores específicas para cada botão */
+.botoes-navegacao-cadastro {
+  background-color: aqua;
+}
+
+.botoes-navegacao-login {
+  background-color: #ff8000;
+}
+
+.header-home .menu-navegacao .botoes-navegacao-cadastro:hover {
+  color: #ff8000;
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-home .menu-navegacao .botoes-navegacao-login:hover {
+  color: aqua;
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+/* Container de boas-vindas */
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.welcome-container {
+  background-color: #026a6e; /* Cor principal do seu wrapper-login */
+  background-image: url("../assets/1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.welcome-content {
+  max-width: 1000px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content-text,
+.content-title {
+  left: 480px;
+  max-width: 1000px;
+  text-align: center;
+  white-space: normal;
+  margin-right: -500px;
+}
+
+.welcome-subtitle {
+  font-size: 0, 8rem;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Botões */
+
+.btn-consulta {
+  padding: 16px 32px; /* Reduced padding for header buttons */
+  border-radius: 50px;
+  font-weight: 700;
+  min-width: 180px;
+  min-height: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  background-color: #026a6e;
+  color: #ffffff;
+  border: 3px solid rgb(221, 221, 221);
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  margin-left: 380px;
+}
+
+.welcome-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.btn-consulta:hover {
+  border-color: rgb(255, 128, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de Serviços */
+.services-container {
+  background-color: white;
+  padding: 80px 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.services-title {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #026a6e; /* Cor principal verde */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-card {
+  background-color: #f8fafc;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgb(255, 128, 0); /* Cor laranja no hover */
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #026a6e; /* Cor principal verde */
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #026a6e; /* Cor principal verde */
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 850px;
+    z-index: 100;
+  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.logo-image {
+  max-width: 200px;
+  height: auto;
+}
+
+.hero-section {
+  padding: 10px 0;
+  background: transparent;
+  color: rgb(11, 11, 11);
+}
+
+.hero-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}

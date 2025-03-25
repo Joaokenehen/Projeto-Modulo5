@@ -1,0 +1,119 @@
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* Substitui top, left, right, bottom */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+/* Modal */
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  width: min(90%, 600px); /* Usando min() para limitar o tamanho */
+  max-height: 90vh; /* Para evitar ultrapassar a altura da tela */
+  overflow-y: auto; /* Adiciona scroll interno se o conteúdo for maior */
+  position: relative;
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 16px 16px 0 0; /* Substitui top-left e top-right */
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  color: #026a6e;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #e6f3f3;
+  color: #026a6e;
+}
+
+/* Content */
+.modal-content {
+  padding: 24px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 0 0 16px 16px; /* Substitui bottom-left e bottom-right */
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancel {
+  background-color: #e2e8f0;
+}
+
+.btn-cancel:hover {
+  background-color: #cbd5e1;
+}
+
+.btn-confirm {
+  background-color: #026a6e;
+  color: #fff;
+}
+
+.btn-confirm:hover {
+  background-color: #024f53;
+}
+
+/* Animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
